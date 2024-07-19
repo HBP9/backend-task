@@ -41,3 +41,22 @@
 [2024-07-19T15:13:53.656Z] INFO: DELETE on url /deleteMovie with body {"name":"Some Movie"}
 [2024-07-19T15:13:53.659Z] INFO: DELETE on url /deleteMovie with body {}
 [2024-07-19T15:13:53.661Z] INFO: DELETE on url /deleteMovie with body {"name":"Other Movie"}
+[2024-07-19T15:21:55.340Z] INFO: GET on url /getMovie?name=%22avenger%22 with query {"name":"\"avenger\""}
+[2024-07-19T15:23:07.482Z] INFO: GET on url /getMovie?name=%22avenger%22 with query {"name":"\"avenger\""}
+[2024-07-19T15:23:53.165Z] INFO: GET on url /getMovie?name=%22avenger%22 with query {"name":"\"avenger\""}
+[2024-07-19T15:24:24.775Z] INFO: GET on url /getMovie?name=%22Avengers%22 with query {"name":"\"Avengers\""}
+[2024-07-19T15:25:56.111Z] INFO: GET on url /getMovie?name=%22Avengers%22 with query {"name":"\"Avengers\""}
+[2024-07-19T15:26:19.942Z] INFO: GET on url /getMovie?name=%22Avengers:%20Endgame%22 with query {"name":"\"Avengers: Endgame\""}
+[2024-07-19T15:26:21.708Z] INFO: GET on url /getMovie?name=%22Avengers:%20Endgame%22 with query {"name":"\"Avengers: Endgame\""}
+[2024-07-19T15:26:41.515Z] INFO: GET on url /getMovie?name=%22Avengers:%20Endgame%22 with query {"name":"\"Avengers: Endgame\""}
+[2024-07-19T15:26:48.520Z] INFO: GET on url /getMovie?name=%22Avengers:Endgame%22 with query {"name":"\"Avengers:Endgame\""}
+[2024-07-19T15:26:54.689Z] INFO: GET on url /getMovie?name=Avengers:Endgame with query {"name":"Avengers:Endgame"}
+[2024-07-19T15:27:04.820Z] INFO: GET on url /getMovie?name=Avengers:%20Endgame with query {"name":"Avengers: Endgame"}
+[2024-07-19T15:27:19.050Z] INFO: GET on url /getMovie?name=Avengers:%20Endgame with query {"name":"Avengers: Endgame"}
+[2024-07-19T15:27:20.598Z] INFO: GET on url /getMovie?name=Avengers:%20Endgame with query {"name":"Avengers: Endgame"}
+[2024-07-19T15:27:34.424Z] INFO: GET on url /getMovie?name=Avengers:%20Endgame with query {"name":"Avengers: Endgame"}
+[2024-07-19T15:28:17.828Z] INFO: GET on url /getMovie?name=Avengers:%20Endgame with query {"name":"Avengers: Endgame"}
+[2024-07-19T15:28:24.129Z] INFO: GET on url /getMovie?name=Avengers with query {"name":"Avengers"}
+[2024-07-19T15:28:28.256Z] INFO: GET on url /getMovie?name=Ave with query {"name":"Ave"}
+[2024-07-19T15:28:32.982Z] INFO: GET on url /getMovie?name=a with query {"name":"a"}
+[2024-07-19T15:28:41.774Z] INFO: GET on url /getMovie?name=a with query {"name":"a"}

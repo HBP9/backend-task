@@ -32,7 +32,9 @@ router.post("/addMovie", async (req, res) => {
 router.get("/getMovie", async (req, res) => {
   const { name } = req.query;
   try {
-    const movie = await Movies.findOne({ name });
+    const movie = await Movies.find({
+      name: { $regex: name, $options: "i" },
+    });
     if (!movie) {
       return res.status(404).json({ message: "Movie not found" });
     }
