@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const validator = require("validator");
 const Movies = require("../models/movie");
+const logger = require("../utils/logger");
+const loggingMiddleware = require("../utils/logginMiddleware");
+
+router.use(loggingMiddleware);
 
 router.post("/addMovie", async (req, res) => {
   const { name, img, summary } = req.body;
@@ -20,6 +24,7 @@ router.post("/addMovie", async (req, res) => {
     const newMovie = await movie.save();
     res.status(201).json(newMovie);
   } catch (err) {
+    logger.error(`${req.method} on url ${req.url} error ${err.message}`);
     res.status(500).json({ message: err.message });
   }
 });
@@ -33,7 +38,8 @@ router.get("/getMovie", async (req, res) => {
     }
     res.json(movie);
   } catch (error) {
-    res.status(500).json({ message: err.message });
+    logger.error(`${req.method} on url ${req.url} error ${error.message}`);
+    res.status(500).json({ message: error.message });
   }
 });
 
@@ -56,6 +62,7 @@ router.patch("/updateMovie", async (req, res) => {
     }
     res.json(updatedMovie);
   } catch (err) {
+    logger.error(`${req.method} on url ${req.url} error ${err.message}`);
     res.status(500).json({ message: err.message });
   }
 });
@@ -72,6 +79,7 @@ router.delete("/deleteMovie", async (req, res) => {
     }
     res.json({ message: "Movie deleted successfully", movie: deletedMovie });
   } catch (err) {
+    logger.error(`${req.method} on url ${req.url} error ${err.message}`);
     res.status(500).json({ message: err.message });
   }
 });

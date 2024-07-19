@@ -35,3 +35,5 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`App is Running On Port ${PORT}`);
 });
+
+module.exports = app;
